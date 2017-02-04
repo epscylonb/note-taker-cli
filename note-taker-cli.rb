@@ -32,7 +32,7 @@ while true
   puts "Back:".blue
   STDOUT.flush
   back = STDIN.gets.chomp
-  if front.empty? or back.empty?
+  if front.empty? || back.empty?
     puts front
     puts back
     puts "Empty field, ignoring".red
