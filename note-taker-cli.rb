@@ -23,6 +23,8 @@ def write_to_csv(front, back)
   end
 end
 
+puts "CTRL-C to exit".blue
+
 while true
   puts "\nFront:".blue
   STDOUT.flush
