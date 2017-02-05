@@ -2,6 +2,7 @@
 
 require 'csv'
 require 'colorize'
+require 'readline'
 
 abort "No CSV specified" unless ARGV[0]
 
@@ -25,13 +26,9 @@ end
 
 puts "CTRL-C to exit".blue
 
-while true
-  puts "\nFront:".blue
-  STDOUT.flush
-  front = STDIN.gets.chomp
-  puts "Back:".blue
-  STDOUT.flush
-  back = STDIN.gets.chomp
+loop do
+  front = Readline.readline("Front:\n".blue)
+  back = Readline.readline("Back:\n".blue)
   if front.empty? || back.empty?
     puts front
     puts back
